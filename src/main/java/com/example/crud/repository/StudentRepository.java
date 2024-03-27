@@ -10,8 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
-    @Query(
-    value = "SELECT * FROM student WHERE student_marks >?1", 
-    nativeQuery = true)
+    @Query(value = "SELECT * FROM student WHERE student_marks >?1", nativeQuery = true)
     List<Student> findStudentsByMarks(float student_marks);
 }
+// change
